@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - backend
+    environment:
+      - MYSQL_DATABASE=book_db
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+      - MYSQL_ROOT_PASSWORD=admin
+    command:
+      - '--default-authentication-plugin=mysql_native_password'
+
+volumes:
+  mysql-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./mnt/container_storage/book-api/mysql
+      o: bind
+
+networks:
+  backend:
