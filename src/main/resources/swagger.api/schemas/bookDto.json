@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Book dto",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Book id"
+    },
+    "title": {
+      "type": "string",
+      "description": "Book title"
+    },
+    "isbn": {
+      "type": "string",
+      "description": "Book ISBN"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Authors of the book"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "title"
+  ]
+}

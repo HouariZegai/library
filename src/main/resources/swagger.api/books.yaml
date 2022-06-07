@@ -1,0 +1,56 @@
+openapi: 3.0.3
+info:
+  title: BooksApi
+  description: Books Api
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  /books:
+    post:
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/bookDto"
+        '422':
+          $ref: "#/components/responses/trait_validate_422"
+        '500':
+          description: Internal server error
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Internal server error
+      description: Create book
+      operationId: createBook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/bookDto"
+
+components:
+  responses:
+    trait_validate_422:
+      description: Validation errors
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/errors"
+  schemas:
+    errors:
+      $ref: schemas/errors.json
+    bookDto:
+      $ref: schemas/bookDto.json
+  parameters:
+    trait_path_id_required:
+      name: id
+      in: path
+      required: true
+      description: Record id
+      schema:
+        type: string
