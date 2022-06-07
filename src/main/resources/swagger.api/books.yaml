@@ -18,12 +18,7 @@ paths:
         '422':
           $ref: "#/components/responses/trait_validate_422"
         '500':
-          description: Internal server error
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: Internal server error
+          $ref: "#/components/responses/trait_response_500"
       description: Create book
       operationId: createBook
       requestBody:
@@ -32,6 +27,23 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/bookDto"
+    get:
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/bookCollectionDto"
+        '422':
+          $ref: "#/components/responses/trait_validate_422"
+        '500':
+          $ref: "#/components/responses/trait_response_500"
+      description: Get book list
+      operationId: getBooks
+      parameters:
+        - $ref: "#/components/parameters/trait_pageable_offset"
+        - $ref: "#/components/parameters/trait_pageable_limit"
 
 components:
   responses:
@@ -41,16 +53,43 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/errors"
+    trait_response_500:
+      description: Internal server error
+      content:
+        text/plain:
+          schema:
+            type: string
+            example: Internal server error
   schemas:
     errors:
       $ref: schemas/errors.json
     bookDto:
       $ref: schemas/bookDto.json
+    bookCollectionDto:
+      $ref: schemas/bookCollectionDto.json
   parameters:
-    trait_path_id_required:
+    trait_id_path_required:
       name: id
       in: path
       required: true
       description: Record id
       schema:
         type: string
+    trait_pageable_offset:
+      name: offset
+      in: query
+      description: Skip over a number of elements by specifying an offset value for the query
+      schema:
+        default: 0
+        minimum: 0
+        maximum: 2147483647
+        type: integer
+    trait_pageable_limit:
+      name: limit
+      in: query
+      description: Limit the number of elements returned in the response
+      schema:
+        default: 10
+        minimum: 0
+        maximum: 2147483647
+        type: integer

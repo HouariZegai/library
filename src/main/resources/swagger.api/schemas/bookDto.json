@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "Book dto",
+  "description": "Book DTO",
   "type": "object",
   "properties": {
     "id": {
