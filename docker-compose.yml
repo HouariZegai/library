@@ -1,29 +1,26 @@
 version: '3.9'
 
 services:
-  mysql:
-    image: mysql:8
-    container_name: mysql
+  postgres:
+    image: postgres:11-alpine
+    container_name: mod_heading_postgres
     volumes:
-      - mysql-data:/var/lib/mysql
+      - postgres-data:/var/lib/postgresql/data
     ports:
-      - 3306:3306
-    networks:
-      - backend
+      - 5432:5432
+    command: [ "postgres", "-c", "log_statement=all" ]
     environment:
-      - MYSQL_DATABASE=book_db
-      - MYSQL_USER=admin
-      - MYSQL_PASSWORD=admin
-      - MYSQL_ROOT_PASSWORD=admin
-    command:
-      - '--default-authentication-plugin=mysql_native_password'
+      - POSTGRES_SERVER=postgres
+      - POSTGRES_DB=book_db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
 
 volumes:
-  mysql-data:
+  postgres-data:
     driver: local
     driver_opts:
       type: none
-      device: ./mnt/container_storage/book-api/mysql
+      device: ./mnt/container_storage/book-api/progres
       o: bind
 
 networks:
