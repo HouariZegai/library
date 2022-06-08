@@ -1,7 +1,7 @@
 package com.houarizegai.bookapi.service;
 
-import com.houarizegai.bookapi.domain.dto.BookCollectionDto;
-import com.houarizegai.bookapi.domain.dto.BookDto;
+import com.houarizegai.bookapi.dto.BookCollectionDto;
+import com.houarizegai.bookapi.dto.BookDto;
 
 public interface BookService {
 

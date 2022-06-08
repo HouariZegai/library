@@ -1,4 +1,4 @@
-package com.houarizegai.bookapi.domain.entity;
+package com.houarizegai.bookapi.domain;
 
 import com.vladmihalcea.hibernate.type.array.ListArrayType;
 import lombok.AllArgsConstructor;

@@ -120,8 +120,8 @@
                             <inputSpec>${books.yaml.file}</inputSpec>
                             <output>${project.build.directory}/generated-sources</output>
                             <generatorName>spring</generatorName>
-                            <modelPackage>${project.groupId}.bookapi.domain.dto</modelPackage>
-                            <apiPackage>${project.groupId}.bookapi.rest.resource</apiPackage>
+                            <modelPackage>${project.groupId}.bookapi.dto</modelPackage>
+                            <apiPackage>${project.groupId}.bookapi.controller.rest</apiPackage>
                             <generateApis>true</generateApis>
                             <generateApiTests>true</generateApiTests>
                             <generateApiDocumentation>true</generateApiDocumentation>

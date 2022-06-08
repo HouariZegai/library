@@ -1,8 +1,8 @@
 package com.houarizegai.bookapi.mapper;
 
-import com.houarizegai.bookapi.domain.dto.BookCollectionDto;
-import com.houarizegai.bookapi.domain.dto.BookDto;
-import com.houarizegai.bookapi.domain.entity.Book;
+import com.houarizegai.bookapi.dto.BookCollectionDto;
+import com.houarizegai.bookapi.dto.BookDto;
+import com.houarizegai.bookapi.domain.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValueCheckStrategy;

@@ -1,8 +1,8 @@
 package com.houarizegai.bookapi.service.impl;
 
-import com.houarizegai.bookapi.BookRepository;
-import com.houarizegai.bookapi.domain.dto.BookCollectionDto;
-import com.houarizegai.bookapi.domain.dto.BookDto;
+import com.houarizegai.bookapi.repository.BookRepository;
+import com.houarizegai.bookapi.dto.BookCollectionDto;
+import com.houarizegai.bookapi.dto.BookDto;
 import com.houarizegai.bookapi.mapper.BookMapper;
 import com.houarizegai.bookapi.service.BookService;
 import lombok.RequiredArgsConstructor;
