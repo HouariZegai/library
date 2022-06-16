@@ -1,10 +1,10 @@
-package com.houarizegai.bookapi;
+package com.houarizegai.library;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BookApiApplicationTests {
+class LibraryApplicationTests {
 
     @Test
     void contextLoads() {

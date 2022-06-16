@@ -1,4 +1,4 @@
-package com.houarizegai.bookapi.domain;
+package com.houarizegai.library.domain;
 
 import com.vladmihalcea.hibernate.type.array.ListArrayType;
 import lombok.*;

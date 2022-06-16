@@ -2,7 +2,7 @@ FROM openjdk:17-alpine
 
 USER root
 
-ENV APP_FILE book-api-fat.jar
+ENV APP_FILE library-fat.jar
 
 ARG JAR_FILE=./target/*.jar
 COPY ${JAR_FILE} ${JAVA_APP_DIR}/${APP_FILE}

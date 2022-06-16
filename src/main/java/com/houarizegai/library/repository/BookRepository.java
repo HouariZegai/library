@@ -1,6 +1,6 @@
-package com.houarizegai.bookapi.repository;
+package com.houarizegai.library.repository;
 
-import com.houarizegai.bookapi.domain.Book;
+import com.houarizegai.library.domain.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

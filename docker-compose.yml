@@ -3,7 +3,7 @@ version: '3.9'
 services:
   postgres:
     image: postgres:11-alpine
-    container_name: mod_heading_postgres
+    container_name: library_postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
     ports:
@@ -11,7 +11,7 @@ services:
     command: [ "postgres", "-c", "log_statement=all" ]
     environment:
       - POSTGRES_SERVER=postgres
-      - POSTGRES_DB=book_db
+      - POSTGRES_DB=library
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
 
@@ -20,7 +20,7 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: ./mnt/container_storage/book-api/progres
+      device: ./mnt/container_storage/library/progressql
       o: bind
 
 networks:

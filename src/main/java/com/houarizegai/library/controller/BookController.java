@@ -1,9 +1,9 @@
-package com.houarizegai.bookapi.controller;
+package com.houarizegai.library.controller;
 
-import com.houarizegai.bookapi.controller.rest.BooksApi;
-import com.houarizegai.bookapi.dto.BookCollectionDto;
-import com.houarizegai.bookapi.dto.BookDto;
-import com.houarizegai.bookapi.service.BookService;
+import com.houarizegai.library.controller.rest.BooksApi;
+import com.houarizegai.library.dto.BookCollectionDto;
+import com.houarizegai.library.dto.BookDto;
+import com.houarizegai.library.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;

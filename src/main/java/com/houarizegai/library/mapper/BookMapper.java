@@ -1,8 +1,8 @@
-package com.houarizegai.bookapi.mapper;
+package com.houarizegai.library.mapper;
 
-import com.houarizegai.bookapi.dto.BookCollectionDto;
-import com.houarizegai.bookapi.dto.BookDto;
-import com.houarizegai.bookapi.domain.Book;
+import com.houarizegai.library.dto.BookCollectionDto;
+import com.houarizegai.library.domain.Book;
+import com.houarizegai.library.dto.BookDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValueCheckStrategy;
@@ -19,9 +19,9 @@ public interface BookMapper {
                 .totalRecords((int) bookPage.getTotalElements());
     }
 
-    @Mapping(target = "id", expression = "java(com.houarizegai.bookapi.util.StringUtil.uuidToStringSafe(book.getId()))")
+    @Mapping(target = "id", expression = "java(com.houarizegai.library.util.StringUtil.uuidToStringSafe(book.getId()))")
     BookDto toBookDto(Book book);
 
-    @Mapping(target = "id", expression = "java(com.houarizegai.bookapi.util.StringUtil.stringToUuidSafe(bookDto.getId()))")
+    @Mapping(target = "id", expression = "java(com.houarizegai.library.util.StringUtil.stringToUuidSafe(bookDto.getId()))")
     Book toBook(BookDto bookDto);
 }

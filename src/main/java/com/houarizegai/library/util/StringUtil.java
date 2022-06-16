@@ -1,4 +1,4 @@
-package com.houarizegai.bookapi.util;
+package com.houarizegai.library.util;
 
 import java.util.Objects;
 import java.util.UUID;

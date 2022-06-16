@@ -1,7 +1,7 @@
-package com.houarizegai.bookapi.controller;
+package com.houarizegai.library.controller;
 
-import com.houarizegai.bookapi.dto.BookDto;
-import com.houarizegai.bookapi.service.BookService;
+import com.houarizegai.library.dto.BookDto;
+import com.houarizegai.library.service.BookService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

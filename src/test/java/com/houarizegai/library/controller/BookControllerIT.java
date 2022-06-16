@@ -1,7 +1,7 @@
-package com.houarizegai.bookapi.controller;
+package com.houarizegai.library.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.houarizegai.bookapi.dto.BookDto;
+import com.houarizegai.library.dto.BookDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

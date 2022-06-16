@@ -1,6 +1,6 @@
-package com.houarizegai.bookapi.service;
+package com.houarizegai.library.service;
 
-import com.houarizegai.bookapi.dto.BookDto;
+import com.houarizegai.library.dto.BookDto;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
