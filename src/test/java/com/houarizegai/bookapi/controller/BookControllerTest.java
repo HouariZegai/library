@@ -31,7 +31,7 @@ class BookControllerTest {
             .addAuthorsItem("Joshua Bloch");
 
     @Test
-    void whenValidBook_ShouldSaveAndReturn() {
+    void shouldSaveAndReturn() {
         when(bookService.createBook(bookDto)).thenReturn(bookDto);
         var createdBookDto = bookController.createBook(bookDto).getBody();
         Assertions.assertEquals(createdBookDto, bookDto);

@@ -31,7 +31,7 @@ class BookControllerIT {
             .addAuthorsItem("Joshua Bloch");
 
     @Test
-    void whenValidBook_ShouldSaveAndReturn() throws Exception {
+    void shouldSaveAndReturn() throws Exception {
         mockMvc.perform(post("/books")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(bookDto)))
