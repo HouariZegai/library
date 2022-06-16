@@ -1,10 +1,7 @@
 package com.houarizegai.bookapi.domain;
 
 import com.vladmihalcea.hibernate.type.array.ListArrayType;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
@@ -15,13 +12,14 @@ import java.util.UUID;
 
 @Table(name = "book")
 @Entity
+@TypeDefs({
+        @TypeDef(name = "list-array", typeClass = ListArrayType.class)
+})
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@TypeDefs({
-        @TypeDef(name = "list-array", typeClass = ListArrayType.class)
-})
+@Builder
 public class Book {
 
     @Id
