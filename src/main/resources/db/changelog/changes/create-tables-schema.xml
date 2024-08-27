@@ -6,7 +6,7 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd"
         objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
 
-    <changeSet id="create-tables-schemas-1" author="Houari Zegai">
+    <changeSet id="000001" author="Houari Zegai">
         <createTable tableName="book">
             <column name="id" type="uuid">
                 <constraints primaryKey="true" primaryKeyName="pk_book" nullable="false"/>
@@ -14,7 +14,9 @@
             <column name="title" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="isbn" type="varchar(20)"/>
+            <column name="isbn" type="varchar(20)">
+                <constraints unique="true"/>
+            </column>
             <column name="authors" type="varchar[]" defaultValue="{}">
                 <constraints nullable="false"/>
             </column>

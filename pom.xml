@@ -15,10 +15,14 @@
     <description>Library management system</description>
     <properties>
         <java.version>17</java.version>
-        <openapi-generator.version>6.0.0</openapi-generator.version>
+        <openapi-generator.version>6.3.0</openapi-generator.version>
         <books.yaml.file>${project.basedir}/src/main/resources/swagger.api/books.yaml</books.yaml.file>
-        <hibernate-types.version>2.16.2</hibernate-types.version>
-        <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
+        <hibernate-types.version>2.21.1</hibernate-types.version>
+        <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
+        <swagger-annotations.version>2.2.8</swagger-annotations.version>
+        <jackson-databind-nullable.version>0.2.4</jackson-databind-nullable.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
+        <commons-validator.version>1.7</commons-validator.version>
     </properties>
     <dependencies>
         <dependency>
@@ -51,17 +55,17 @@
         <dependency>
             <groupId>io.swagger.core.v3</groupId>
             <artifactId>swagger-annotations</artifactId>
-            <version>2.2.0</version>
+            <version>${swagger-annotations.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openapitools</groupId>
             <artifactId>jackson-databind-nullable</artifactId>
-            <version>0.2.2</version>
+            <version>${jackson-databind-nullable.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
-            <version>2.0.1.Final</version>
+            <version>${validation-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
@@ -73,6 +77,11 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${org.mapstruct.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>${commons-validator.version}</version>
         </dependency>
 
         <dependency>

@@ -1,9 +1,10 @@
-package com.houarizegai.library.service;
+package com.houarizegai.library.service.impl;
 
 import com.houarizegai.library.dto.BookCollectionDto;
 import com.houarizegai.library.dto.BookDto;
 import com.houarizegai.library.mapper.BookMapper;
 import com.houarizegai.library.repository.BookRepository;
+import com.houarizegai.library.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;

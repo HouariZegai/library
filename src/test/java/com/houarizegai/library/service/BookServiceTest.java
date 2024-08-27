@@ -5,6 +5,7 @@ import com.houarizegai.library.dto.BookCollectionDto;
 import com.houarizegai.library.dto.BookDto;
 import com.houarizegai.library.mapper.BookMapper;
 import com.houarizegai.library.repository.BookRepository;
+import com.houarizegai.library.service.impl.BookServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -47,7 +48,7 @@ class BookServiceTest {
 
     private final Page<Book> books = new PageImpl<>(List.of(book));
     private final BookCollectionDto bookCollectionDto = new BookCollectionDto()
-            .books(List.of(book))
+            .books(List.of(bookDto))
             .totalRecords((int) books.getTotalElements());
 
     @Test

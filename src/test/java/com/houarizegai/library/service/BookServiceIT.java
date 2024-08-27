@@ -1,6 +1,7 @@
 package com.houarizegai.library.service;
 
 import com.houarizegai.library.dto.BookDto;
+import com.houarizegai.library.service.impl.BookServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ class BookServiceIT {
 
     private final BookDto bookDto = new BookDto()
             .title("Effective Java")
-            .isbn("0134685997")
+            .isbn("0134685992")
             .authors(List.of("Joshua Bloch"));
 
     @Test
